@@ -22,7 +22,7 @@ const NewProduct = (props) => {
           id:res.id,
           description: description,
           title:title
-        }])
+        }]);
         props.navigation.navigate('Product', {
         new: props.navigation.state.params,
       });

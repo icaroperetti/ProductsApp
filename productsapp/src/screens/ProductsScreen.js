@@ -63,24 +63,10 @@ const TaskScreen = (props) => {
   
   return (
    <View>
-     {/* <TextInput
-        mode = "outlined"
-        style={styles.description}
-        placeholder="Nome do produto"
-        value={title}
-        onChangeText={(newValue) => setTitle(newValue)}
-      />
-
-      <TextInput
-        mode = "outlined"
-        style={styles.description}
-        placeholder="Descrição do produto"
-        value={description}
-        onChangeText={(newValue) => setDescription(newValue)}
-      />
-      <Button style={styles.taskBtn} mode="contained" onPress={() => newTask()}>
-        Cadastrar produto
-      </Button> */}
+     {
+      <Button style={styles.btn} mode="contained" onPress={() => props.navigation.navigate('New')}>
+        + Cadastrar produto
+      </Button>}
       
       <FlatList
         style={styles.tasksList}
@@ -93,11 +79,11 @@ const TaskScreen = (props) => {
           );
         }}
       />
-       <FAB
+       {/* <FAB
         style={styles.fab}
         icon="plus"
         onPress={() => props.navigation.navigate('New')}
-  />
+        /> */}
     
     </View>
   );
@@ -121,7 +107,7 @@ const styles = StyleSheet.create({
   btn: {
     marginTop: 20,
     marginRight:30,
-    width:200,
+    width:250,
     alignSelf:'flex-end'
   },
   icon:{
