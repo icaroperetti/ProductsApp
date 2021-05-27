@@ -57,7 +57,7 @@ const Login = (props) => {
                 </Button>
             
             </View>
-            <SnackBar visible={snackbar}  textMessage="Erro ao fazer login" actionHandler={() => snackbarState(false)} actionText="Ok"/>
+            <SnackBar visible={snackbar} textMessage="Your email or password is incorrect" actionHandler={() => snackbarState(false)} actionText="Ok"/>
         </>
     );
 };
